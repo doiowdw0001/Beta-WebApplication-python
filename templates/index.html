@@ -89,6 +89,16 @@
         error dicta quam perspiciatis, laborum fugiat consequatur ex illum fugit accusamus. Voluptates ipsa fuga
         praesentium quo corrupti quos, ullam veniam possimus, dignissimos quas dolorem reprehenderit numquam.</p>
         <br>
-        <h1>Profile : {{mydata.name}}</h1>
+        <h1>Profile : {{data}}</h1>
+        <form method="post" action="">
+            {{form.hidden_tag()}}
+            {{form.name.label}}
+            {{form.name()}}{{form.submit()}}
+        </form>
+        {% if name %}
+        <h3>ชื่อของคุณ {{name}}</h3>
+        {% else %}
+        ไม่พบของมูล
+        {% endif %}
 </body>
 </html>
